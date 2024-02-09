@@ -2,8 +2,154 @@ html {
     height: 100%;
 }
 
+/* 
+=======================================================================
+Body Conent
+=======================================================================
+*/
+
 body {
     height: 100%;
-    background-color: blueviolet;
+    margin: 0;
+
+    background-image: linear-gradient(359deg, #3023ae, #eb7f7b);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
+/* 
+-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+    Header Section
+-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-
+*/
+
+header {
+    /* ¦¦¦ Positioning ¦¦¦  */
+    position: fixed;
+    z-index: 10;
+    top: 0;
+       
+    /* ¦¦¦ Sizing  ¦¦¦  */
+    height: 75px;
+    width: 100%;
+    background-color: rgb(41, 83, 41);
+
+    /* ¦¦¦ Display  ¦¦¦  */
+    display: grid;
+    grid-template: 1fr/ repeat(8, 1fr);
+    grid-template-areas: 
+    'logo . . . . . . .';
+
+    /* Design */
+    border-bottom: 5px solid silver;
+
+    /* 
+    Displays on page as: 
+    [Logo][   ][   ][   ][   ][   ][   ][   ]   @1fr 75px
+    */
+
+} 
+
+
+.breadcrumb {
+    display: none;
+}
+
+header .logo {
+    background: green; 
+    grid-area: logo;
+}
+
+header:hover{
+    /* ¦¦¦ Positioning ¦¦¦  */
+    position: fixed;
+    z-index: 10;
+    top: 0;
+       
+    /* ¦¦¦ Sizing  ¦¦¦  */
+    height: 100px;
+    width: 100%;
+    background-color: rgb(41, 83, 41);
+
+    /* ¦¦¦ Display  ¦¦¦  */
+    display: grid;
+    grid-template: 3fr 1fr / repeat(8, 1fr);
+    grid-template-areas: 
+    'logo . . . . . . .'
+    'nav nav nav nav nav nav nav nav ';
+
+    /* 
+    Displays on page as: 
+    [Logo][   ][   ][   ][   ][   ][   ][   ]   @3fr
+    [Nav                                    ]   @1fr
+    */
+
+    .breadcrumb{
+    background: silver;
+    grid-area: nav;
+    display: flex;
+    };
+
+}
+
+
+/* ....................................................................
+    Navigation Bar
+.....................................................................*/
+.breadcrumb ul {
+    flex: 1;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.breadcrumb ul li {
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: right;
+}
+
+
+/* 
+-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+   Main Section
+-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-
+*/
+
+main {
+    min-height: 100%;
+    max-height: fit-content;
+}
+
+.content {
+    margin-top: 75px;
+    min-height: 100%;
+    max-height: fit-content;
+    background-color: blue;
+    opacity: 0.5;
+
+    display: grid;
+    grid-template: fit-content 500px 500px / 1fr;
+
+    grid-auto-rows: 500px;
+
+    row-gap: 10px;
+}
+
+.content .article {
+    background-color: yellow;
+    border: 10px solid green;
+}
+
+
+/* 
+-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+   Footer Section
+-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-‾-
+*/
+footer {
+    height: 5%;
+    background-color: white;
+}
